@@ -1,0 +1,88 @@
+Enunciado
+
+Uma empresa deseja criar um sistema simples de encriptação de mensagens.
+
+Dada uma string composta apenas por letras minúsculas (a a z) e espaços, faça um programa em C que:
+
+1. Leia uma frase (até 100 caracteres).
+
+
+2. Para cada letra:
+
+avance 3 posições no alfabeto
+
+'a' → 'd', 'b' → 'e', 'x' → 'a', 'y' → 'b', 'z' → 'c'
+
+
+
+
+3. Espaços devem ser mantidos
+
+
+4. Mostre a mensagem encriptada
+
+
+
+
+---
+
+📥 Entrada
+
+Uma linha contendo uma frase (pode conter espaços).
+
+📤 Saída
+
+A frase encriptada.
+
+
+---
+
+🔎 Exemplo
+
+Entrada
+
+ola mundo
+
+Saída
+
+rod pxqgr
+
+
+---
+
+📌 REGRAS DE PROVA
+
+Use vetor de char (string)
+
+Use for
+
+Não use funções prontas de criptografia
+
+O código precisa compilar
+
+Pode usar <string.h>
+
+
+#include <stdio.h>
+
+int main(){
+ 
+    char frase[100];
+    int i;
+
+    fgets(frase, 100, stdin);
+
+    for(i = 0; frase[i] != '\0'; i++){
+        if(frase[i] >= 'a' && frase[i] <= 'z'){
+            frase[i] = frase[i] + 3;
+
+            if(frase[i] > 'z'){
+                frase[i] = frase[i] - 26;
+            }
+        }
+    }
+
+    printf("%s", frase);
+
+    return 0;
+}
