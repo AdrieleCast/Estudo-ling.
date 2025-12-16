@@ -1,0 +1,207 @@
+
+
+🧠 MODELO MENTAL DE PROVA (C)
+
+Sempre pense em 5 PASSOS.
+Não pule nenhum.
+
+
+---
+
+🔹 PASSO 1 — ENTENDER A ENTRADA
+
+Pergunte mentalmente:
+
+👉 O que o programa vai ler?
+
+número?
+
+vários números?
+
+vetor?
+
+matriz?
+
+string?
+
+
+📌 Se não entender a entrada → para aqui e releia.
+
+✍️ Exemplo:
+
+> “Leia uma matriz 3x3”
+
+
+
+✔️ Entrada = 9 números
+✔️ Precisa de for duplo
+
+
+---
+
+🔹 PASSO 2 — ESCOLHER A ESTRUTURA CERTA
+
+Situação	Estrutura
+
+1 valor	variável simples
+Muitos valores	vetor
+Tabela	matriz
+Texto	char string[]
+Repetição	for / while
+Decisão	if / switch
+Reaproveitar lógica	função
+
+
+📌 Isso evita 80% dos erros.
+
+
+---
+
+🔹 PASSO 3 — LER PRIMEIRO, PROCESSAR DEPOIS
+
+⚠️ Nunca misture leitura com impressão final
+
+👉 Ordem certa:
+
+1. Ler
+
+
+2. Calcular / verificar
+
+
+3. Mostrar
+
+
+
+📌 Misturar = saída errada = zero
+
+
+---
+
+🔹 PASSO 4 — PROCESSAMENTO (O “MIÚDO” DA QUESTÃO)
+
+Aqui você se pergunta:
+
+> “O que muda quando encontro X?”
+
+
+
+Exemplos:
+
+encontrou par → soma
+
+encontrou zero → marca linha/coluna
+
+encontrou letra → altera ASCII
+
+condição verdadeira → conta
+
+
+📌 Sempre inicialize:
+
+soma = 0;
+cont = 0;
+
+
+---
+
+🔹 PASSO 5 — SAÍDA LIMPA
+
+Pergunte: 👉 O que exatamente o professor quer imprimir?
+
+número?
+
+frase?
+
+matriz formatada?
+
+linha por linha?
+
+
+📌 Nada a mais. Nada a menos.
+
+
+---
+
+🧩 MODELOS PRONTOS (DECORA)
+
+🔸 VETOR
+
+for(i = 0; i < n; i++){
+    scanf("%d", &v[i]);
+}
+
+
+---
+
+🔸 MATRIZ
+
+for(i = 0; i < l; i++){
+    for(j = 0; j < c; j++){
+        scanf("%d", &m[i][j]);
+    }
+}
+
+
+---
+
+🔸 STRING
+
+fgets(s, 100, stdin);
+
+for(i = 0; s[i] != '\0'; i++){
+   // processa caractere
+}
+
+
+---
+
+🔸 FUNÇÃO
+
+int func(int a){
+    return a;
+}
+
+
+---
+
+🚨 ERROS QUE ZERAM PROVA (DECORA)
+
+❌ variável não declarada
+❌ usar == no lugar de =
+❌ esquecer & no scanf
+❌ não inicializar soma/contador
+❌ saída fora do padrão
+❌ código não compila
+
+
+---
+
+🎯 COMO PENSAR NA HORA DA PROVA
+
+Se travar, diga mentalmente:
+
+> “O que eu estou LENDO?”
+“Onde eu PROCESSO?”
+“O que eu IMPRIMO?”
+
+
+
+Isso destrava o cérebro.
+
+
+---
+
+🔥 AGORA VAMOS FIXAR (RÁPIDO)
+
+Me responde sem código, só explicando:
+
+👉 Se a questão pedir
+“Leia uma string e conte quantas vogais existem”
+
+Quais seriam: 1️⃣ Entrada
+2️⃣ Estrutura
+3️⃣ Processamento
+4️⃣ Saída
+
+Se você responder certo, você passa nessa prova.
