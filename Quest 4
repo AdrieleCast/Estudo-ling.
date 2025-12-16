@@ -1,0 +1,21 @@
+Crie uma função que receba dois números inteiros e retorne o maior.
+
+#include <stdio.h>
+
+int maior(int a, int b){
+    if(a > b){
+        return a;
+    }else{
+        return b;
+    }
+}
+
+int main(){
+    int x, y;
+
+    scanf("%d %d", &x, &y);
+
+    printf("%d", maior(x, y));
+
+    return 0;
+}
