@@ -1,0 +1,122 @@
+/*Falha Crítica em uma Rede de Servidores”
+
+Você tem:
+
+Uma matriz N x M
+
+Se algum valor for 0, então:
+
+Toda a linha desse 0 vira 0
+
+Toda a coluna desse 0 vira 0
+
+
+
+👉 Isso é o clássico problema:
+
+> “zerar linha e coluna se existir um zero”
+
+
+
+
+---
+
+🧠 COMO RACIOCINAR NA PROVA (PASSO A PASSO)
+
+Passo 1 — Ler n e m
+
+scanf("%d %d", &n, &m);
+
+
+---
+
+Passo 2 — Ler a matriz
+
+int mat[n][m];
+
+
+---
+
+Passo 3 — Descobrir ONDE tem zero
+
+⚠️ Não pode sair zerando na hora, senão bagunça tudo.
+
+👉 Estratégia de prova:
+
+Criar dois vetores auxiliares
+
+Um para marcar linhas
+
+Um para marcar colunas
+
+
+
+int linha[n], coluna[m];
+
+Inicializa tudo com 0.
+
+
+---
+
+Passo 4 — Percorrer a matriz e marcar
+
+Se achar 0:
+
+marca a linha
+
+marca a coluna
+
+
+
+---
+
+Passo 5 — Zerar a matriz final
+
+Se a linha OU a coluna estiver marcada → vira 0.
+*/
+
+
+#include <stdio.h>
+
+int main(){
+  
+  int N, M;
+  int i, j;
+
+  scanf("%d %d", &N, &M);
+  
+  int m[N][M];
+  int linha[N] = {0};
+  int coluna[M] = {0};
+
+  // leitura da matriz
+  for(i = 0; i < N; i++){
+    for(j = 0; j < M; j++){
+      scanf("%d", &m[i][j]);
+
+      if(m[i][j] == 0){
+        linha[i] = 1;
+        coluna[j] = 1;
+      }
+    }
+  }
+
+  // aplica falha crítica
+  for(i = 0; i < N; i++){
+    for(j = 0; j < M; j++){
+      if(linha[i] == 1 || coluna[j] == 1){
+        m[i][j] = 0;
+      }
+    }
+  }
+
+  // imprime matriz final
+  for(i = 0; i < N; i++){
+    for(j = 0; j < M; j++){
+      printf("%d ", m[i][j]);
+    }
+    printf("\n");
+  }
+
+  return 0;
+}
